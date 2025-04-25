@@ -11,7 +11,8 @@ int main() {
     int NumerodePontosTuristicos = 15; 
     float area = 249; 
     float pib = 20.3; 
-
+    float DensidadePopulacional;
+    float PibPerCapita;
     
     printf ("O estado é: ");
     scanf (" %c", &estado);
@@ -41,6 +42,13 @@ int main() {
     scanf ("%d", &NumerodePontosTuristicos);
     printf ("Número de Pontos Turísticos: %d\n", NumerodePontosTuristicos);
 
+    DensidadePopulacional = populacao / area;
+    printf ("A densidade populacional é: %.2f habitantes por km²\n", DensidadePopulacional);
+
+    PibPerCapita = pib * 1000000000 / populacao; // Convertendo PIB de bilhões para reais
+    printf ("O PIB per capita é: %.2f reais por habitante\n", PibPerCapita);
+
+    
     // Adicione uma linha em branco entre as cartas
     printf ("\n");
 
@@ -52,6 +60,8 @@ int main() {
     int NumeroDePontosTuristicos2 = 34;
     float area2 = 82.62; 
     float pib2 = 9.521; 
+    float DensidadePopulacional2;
+    float PibPerCapita2;
 
     
     printf ("O estado2 é: ");
@@ -81,6 +91,12 @@ int main() {
     printf ("O Número de Pontos Turísticos2 são: ");
     scanf ("%d", &NumeroDePontosTuristicos2);
     printf ("Número de Pontos Turísticos: %d\n", NumeroDePontosTuristicos2);
+
+    DensidadePopulacional2 = populacao2 / area2;
+    printf ("A densidade populacional é: %.2f habitantes por km²\n", DensidadePopulacional2);
+
+    PibPerCapita = pib2 * 1000000 / populacao2; // Convertendo PIB de milhões para reais
+    printf ("O PIB per capita é: %.2f reais por habitante\n", PibPerCapita);
 
 
     return 0;
