@@ -13,6 +13,7 @@ int main() {
     float pib = 20.3; 
     float DensidadePopulacional;
     float PibPerCapita;
+    float SuperPoder;
     
     printf ("O estado é: ");
     scanf (" %c", &estado);
@@ -48,6 +49,9 @@ int main() {
     PibPerCapita = pib * 1000000000 / populacao; // Convertendo PIB de bilhões para reais
     printf ("O PIB per capita é: %.2f reais por habitante\n", PibPerCapita);
 
+    SuperPoder = populacao + area + pib + NumerodePontosTuristicos + PibPerCapita + (1 / DensidadePopulacional); // 1 / DensidadePopulacional é o inverso da densidade populacional
+    printf ("O Super Poder dessa carta é: %.2f\n", SuperPoder); 
+
     
     // Adicione uma linha em branco entre as cartas
     printf ("\n");
@@ -62,7 +66,7 @@ int main() {
     float pib2 = 9.521; 
     float DensidadePopulacional2;
     float PibPerCapita2;
-
+    float SuperPoder2;
     
     printf ("O estado2 é: ");
     scanf (" %c", &estado2);
@@ -95,8 +99,26 @@ int main() {
     DensidadePopulacional2 = populacao2 / area2;
     printf ("A densidade populacional é: %.2f habitantes por km²\n", DensidadePopulacional2);
 
-    PibPerCapita = pib2 * 1000000 / populacao2; // Convertendo PIB de milhões para reais
-    printf ("O PIB per capita é: %.2f reais por habitante\n", PibPerCapita);
+    PibPerCapita2 = pib2 * 1000000 / populacao2; // Convertendo PIB de milhões para reais
+    printf ("O PIB per capita é: %.2f reais por habitante\n", PibPerCapita2);
+
+    SuperPoder2 = populacao2 + area2 + pib2 + NumeroDePontosTuristicos2 + PibPerCapita2 + ( 1 /DensidadePopulacional2);
+    printf ("O Super Poder dessa carta é: %.2f\n", SuperPoder2);
+
+
+    // Adicione uma linha em branco entre as cartas
+    printf ("\n");
+
+    // Comparação das cartas ( 1 se a carta1 vencer, 0 se a carta2 vencer)
+
+    printf ("População (vence quem tem mais): %d\n", (populacao > populacao2));
+    printf ("Área (vence quem tem mais): %d\n", (area > area2));
+    printf ("PIB (vence quem tem mais): %d\n", (pib > pib2));
+    printf ("Pontos Turísticos (vence quem tem mais): %d\n", (NumerodePontosTuristicos > NumeroDePontosTuristicos2));
+    printf ("Densidade Populacional (vence quem tem MENOS): %d\n", (DensidadePopulacional < DensidadePopulacional2));
+    printf ("PIB per capita (vence quem tem mais): %d\n", (PibPerCapita > PibPerCapita2));
+    printf ("Super Poder (vence quem tem mais): %d\n", (SuperPoder > SuperPoder2));
+
 
 
     return 0;
